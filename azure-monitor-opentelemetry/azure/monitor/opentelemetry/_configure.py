@@ -30,7 +30,7 @@ from azure.monitor.opentelemetry.exporter import (
     AzureMonitorMetricExporter,
     AzureMonitorTraceExporter,
 )
-from azure.monitor.opentelemetry.util.configurations import _get_configurations
+from azure.monitor.opentelemetry.util._configurations import _get_configurations
 from opentelemetry._logs import get_logger_provider, set_logger_provider
 from opentelemetry.metrics import set_meter_provider
 from opentelemetry.sdk._logs import LoggerProvider, LoggingHandler
