@@ -5,6 +5,3 @@ include LICENSE
 recursive-include tests *.py
 recursive-include samples *.py *.md
 include azure/monitor/opentelemetry/py.typed
-global-exclude *.pyc
-global-exclude *.pyo
-global-exclude __pycache__/*
