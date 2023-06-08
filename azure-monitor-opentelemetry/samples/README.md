@@ -27,7 +27,7 @@ For guidance on the samples README, visit the [sample guide](https://github.com/
 |[metrics/instruments.py][instruments] | Create observable instruments |
 
 |[tracing/django/manage.py][django] | Instrument a django app |
-|[tracing/db_psycopg2.py][db_psycopg2] | Instrument the PscyoPG2 library |
+|[tracing/db_psycopg2.py][db_psycopg2] | Instrument the PsycoPG2 library |
 |[tracing/http_fastapi.py][http_fastapi] | Instrument a FastAPI app |
 |[tracing/http_flask.py][http_flask] | Instrument a Flask app |
 |[tracing/http_requests.py][http_requests] | Instrument the Requests library |
