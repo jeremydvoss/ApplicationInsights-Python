@@ -50,9 +50,7 @@ class AzureStatusLogger:
                 makedirs(_STATUS_LOG_PATH)
             # Change to be hostname and pid
             status_logger_file_name = f"status_{_MACHINE_NAME}_{pid}.json"
-            with open(
-                join(_STATUS_LOG_PATH, status_logger_file_name), "w"
-            ) as f:
+            with open(join(_STATUS_LOG_PATH, status_logger_file_name), "w") as f:
                 f.seek(0)
                 f.write(dumps(status_json))
                 f.truncate()

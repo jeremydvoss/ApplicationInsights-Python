@@ -7,10 +7,11 @@
 
 import logging
 
+from opentelemetry.sdk._configuration import _OTelSDKConfigurator
+
 from azure.monitor.opentelemetry.diagnostics._diagnostic_logging import (
     AzureDiagnosticLogging,
 )
-from opentelemetry.sdk._configuration import _OTelSDKConfigurator
 
 _logger = logging.getLogger(__name__)
 

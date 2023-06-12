@@ -22,9 +22,7 @@ _DIAGNOSTIC_LOGGER_FILE_NAME = "applicationinsights-extension.log"
 _SITE_NAME = _env_var_or_default("WEBSITE_SITE_NAME")
 _SUBSCRIPTION_ID_ENV_VAR = _env_var_or_default("WEBSITE_OWNER_NAME")
 _SUBSCRIPTION_ID = (
-    _SUBSCRIPTION_ID_ENV_VAR.split("+")[0]
-    if _SUBSCRIPTION_ID_ENV_VAR
-    else None
+    _SUBSCRIPTION_ID_ENV_VAR.split("+")[0] if _SUBSCRIPTION_ID_ENV_VAR else None
 )
 _logger = logging.getLogger(__name__)
 _DIAGNOSTIC_LOG_PATH = _get_log_path()
@@ -60,9 +58,7 @@ class AzureDiagnosticLogging:
                     if not exists(_DIAGNOSTIC_LOG_PATH):
                         makedirs(_DIAGNOSTIC_LOG_PATH)
                     AzureDiagnosticLogging._f_handler = logging.FileHandler(
-                        join(
-                            _DIAGNOSTIC_LOG_PATH, _DIAGNOSTIC_LOGGER_FILE_NAME
-                        )
+                        join(_DIAGNOSTIC_LOG_PATH, _DIAGNOSTIC_LOGGER_FILE_NAME)
                     )
                     formatter = logging.Formatter(
                         fmt=log_format, datefmt="%Y-%m-%dT%H:%M:%S"

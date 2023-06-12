@@ -40,9 +40,7 @@ def clear_file():
         f.truncate()
 
 
-def check_file_for_messages(
-    level, messages, logger_name=TEST_LOGGER_NAME_SUB_MODULE
-):
+def check_file_for_messages(level, messages, logger_name=TEST_LOGGER_NAME_SUB_MODULE):
     with open(TEST_DIAGNOSTIC_LOGGER_LOCATION, "r") as f:
         f.seek(0)
         for message in messages:
@@ -194,9 +192,7 @@ class TestDiagnosticLogger(TestCase):
             is_diagnostics_enabled=True,
             subscription_id_env_var=TEST_SUBSCRIPTION_ID_ENV_VAR,
         )
-        self.assertEqual(
-            diagnostic_logger._SUBSCRIPTION_ID, TEST_SUBSCRIPTION_ID
-        )
+        self.assertEqual(diagnostic_logger._SUBSCRIPTION_ID, TEST_SUBSCRIPTION_ID)
         TEST_LOGGER_SUB_MODULE.warning(MESSAGE1)
         TEST_LOGGER_SUB_MODULE.warning(MESSAGE2)
         check_file_for_messages("WARNING", (MESSAGE1, MESSAGE2))
@@ -206,9 +202,7 @@ class TestDiagnosticLogger(TestCase):
             is_diagnostics_enabled=True,
             subscription_id_env_var=TEST_SUBSCRIPTION_ID,
         )
-        self.assertEqual(
-            diagnostic_logger._SUBSCRIPTION_ID, TEST_SUBSCRIPTION_ID
-        )
+        self.assertEqual(diagnostic_logger._SUBSCRIPTION_ID, TEST_SUBSCRIPTION_ID)
         TEST_LOGGER_SUB_MODULE.warning(MESSAGE1)
         TEST_LOGGER_SUB_MODULE.warning(MESSAGE2)
         check_file_for_messages("WARNING", (MESSAGE1, MESSAGE2))

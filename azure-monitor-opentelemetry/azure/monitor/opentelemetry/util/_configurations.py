@@ -8,6 +8,13 @@ from logging import getLogger
 from os import environ
 from typing import Dict
 
+from opentelemetry.environment_variables import (
+    OTEL_LOGS_EXPORTER,
+    OTEL_METRICS_EXPORTER,
+    OTEL_TRACES_EXPORTER,
+)
+from opentelemetry.sdk.environment_variables import OTEL_TRACES_SAMPLER_ARG
+
 from azure.monitor.opentelemetry._constants import (
     DISABLE_AZURE_CORE_TRACING_ARG,
     DISABLE_LOGGING_ARG,
@@ -27,6 +34,7 @@ from opentelemetry.environment_variables import (
     OTEL_TRACES_EXPORTER,
 )
 from opentelemetry.sdk.environment_variables import OTEL_TRACES_SAMPLER_ARG
+
 
 _INVALID_FLOAT_MESSAGE = "Value of %s must be a float. Defaulting to %s: %s"
 _INVALID_INT_MESSAGE = "Value of %s must be a integer. Defaulting to %s: %s"
@@ -57,9 +65,7 @@ def _get_configurations(**kwargs) -> Dict[str, ConfigurationValue]:
 
     # TODO: remove when validation added to BLRP
     if configurations[LOGGING_EXPORT_INTERVAL_MS_ARG] <= 0:
-        raise ValueError(
-            "%s must be positive." % LOGGING_EXPORT_INTERVAL_MS_ARG
-        )
+        raise ValueError("%s must be positive." % LOGGING_EXPORT_INTERVAL_MS_ARG)
 
     return configurations
 

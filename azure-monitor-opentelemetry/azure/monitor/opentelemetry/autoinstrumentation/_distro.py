@@ -6,6 +6,16 @@
 import logging
 from os import environ
 
+from opentelemetry.environment_variables import (
+    OTEL_LOGS_EXPORTER,
+    OTEL_METRICS_EXPORTER,
+    OTEL_TRACES_EXPORTER,
+)
+from opentelemetry.instrumentation.distro import BaseDistro
+from opentelemetry.sdk.environment_variables import (
+    _OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED,
+)
+
 from azure.core.settings import settings
 from azure.core.tracing.ext.opentelemetry_span import OpenTelemetrySpan
 from azure.monitor.opentelemetry._vendor.v0_39b0.opentelemetry.instrumentation.distro import (
@@ -16,14 +26,6 @@ from azure.monitor.opentelemetry.diagnostics._diagnostic_logging import (
 )
 from azure.monitor.opentelemetry.diagnostics._status_logger import (
     AzureStatusLogger,
-)
-from opentelemetry.environment_variables import (
-    OTEL_LOGS_EXPORTER,
-    OTEL_METRICS_EXPORTER,
-    OTEL_TRACES_EXPORTER,
-)
-from opentelemetry.sdk.environment_variables import (
-    _OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED,
 )
 
 _logger = logging.getLogger(__name__)
@@ -51,20 +53,12 @@ def _configure_auto_instrumentation() -> None:
         environ.setdefault(
             OTEL_METRICS_EXPORTER, "azure_monitor_opentelemetry_exporter"
         )
-        environ.setdefault(
-            OTEL_TRACES_EXPORTER, "azure_monitor_opentelemetry_exporter"
-        )
-        environ.setdefault(
-            OTEL_LOGS_EXPORTER, "azure_monitor_opentelemetry_exporter"
-        )
-        environ.setdefault(
-            _OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED, "true"
-        )
+        environ.setdefault(OTEL_TRACES_EXPORTER, "azure_monitor_opentelemetry_exporter")
+        environ.setdefault(OTEL_LOGS_EXPORTER, "azure_monitor_opentelemetry_exporter")
+        environ.setdefault(_OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED, "true")
         settings.tracing_implementation = OpenTelemetrySpan
         AzureStatusLogger.log_status(True)
-        _logger.info(
-            "Azure Monitor OpenTelemetry Distro configured successfully."
-        )
+        _logger.info("Azure Monitor OpenTelemetry Distro configured successfully.")
     except Exception as exc:
         AzureStatusLogger.log_status(False, reason=exc)
         _logger.error(
