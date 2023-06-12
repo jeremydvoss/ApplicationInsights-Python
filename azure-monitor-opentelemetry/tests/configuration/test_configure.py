@@ -324,7 +324,7 @@ class TestConfigure(unittest.TestCase):
         metric_exporter_mock.assert_called_once_with(**configurations)
         reader_mock.assert_called_once_with(metric_exp_init_mock)
 
-    @patch("azure.monitor.opentelemetry._configure.get_dist_dependency_conflicts")
+    @patch("azure.monitor.opentelemetry._configure.get_dependency_conflicts")
     @patch("azure.monitor.opentelemetry._configure.iter_entry_points")
     def test_setup_instrumentations_lib_not_supported(
         self,
@@ -352,7 +352,7 @@ class TestConfigure(unittest.TestCase):
         instrumentor_mock.instrument.assert_called_once()
 
     @patch("azure.monitor.opentelemetry._configure._logger")
-    @patch("azure.monitor.opentelemetry._configure.get_dist_dependency_conflicts")
+    @patch("azure.monitor.opentelemetry._configure.get_dependency_conflicts")
     @patch("azure.monitor.opentelemetry._configure.iter_entry_points")
     def test_setup_instrumentations_conflict(
         self,
@@ -379,7 +379,7 @@ class TestConfigure(unittest.TestCase):
         logger_mock.debug.assert_called_once()
 
     @patch("azure.monitor.opentelemetry._configure._logger")
-    @patch("azure.monitor.opentelemetry._configure.get_dist_dependency_conflicts")
+    @patch("azure.monitor.opentelemetry._configure.get_dependency_conflicts")
     @patch("azure.monitor.opentelemetry._configure.iter_entry_points")
     def test_setup_instrumentations_exception(
         self,
