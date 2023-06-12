@@ -281,10 +281,16 @@ class TestConfigure(unittest.TestCase):
         blrp_mock.assert_called_once_with(
             log_exp_init_mock, schedule_delay_millis=10000
         )
-        lp_init_mock.add_log_record_processor.assert_called_once_with(blrp_init_mock)
-        logging_handler_mock.assert_called_once_with(logger_provider=lp_init_mock)
+        lp_init_mock.add_log_record_processor.assert_called_once_with(
+            blrp_init_mock
+        )
+        logging_handler_mock.assert_called_once_with(
+            logger_provider=lp_init_mock
+        )
         get_logger_mock.assert_called_once_with()
-        logger_mock.addHandler.assert_called_once_with(logging_handler_init_mock)
+        logger_mock.addHandler.assert_called_once_with(
+            logging_handler_init_mock
+        )
 
     @patch(
         "azure.monitor.opentelemetry._configure.PeriodicExportingMetricReader",

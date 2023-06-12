@@ -48,7 +48,9 @@ if not version:
 setup(
     name=PACKAGE_NAME,
     version=version,
-    description="Microsoft {} Client Library for Python".format(PACKAGE_PPRINT_NAME),
+    description="Microsoft {} Client Library for Python".format(
+        PACKAGE_PPRINT_NAME
+    ),
     long_description=open("README.md", "r").read(),
     long_description_content_type="text/markdown",
     license="MIT License",
@@ -82,6 +84,7 @@ setup(
     },
     python_requires=">=3.7",
     install_requires=[
+        "azure-core<2.0.0,>=1.23.0",
         "azure-core-tracing-opentelemetry~=1.0.0b10",
         "azure-monitor-opentelemetry-exporter~=1.0.0b15",
         "opentelemetry-api~=1.19.0",

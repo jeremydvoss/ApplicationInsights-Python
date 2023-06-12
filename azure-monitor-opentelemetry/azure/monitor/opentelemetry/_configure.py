@@ -7,10 +7,6 @@ from logging import getLogger
 from typing import Dict
 
 from opentelemetry._logs import get_logger_provider, set_logger_provider
-from opentelemetry.instrumentation.dependencies import (
-    get_dist_dependency_conflicts,
-)
-from opentelemetry.instrumentation.instrumentor import BaseInstrumentor
 from opentelemetry.metrics import set_meter_provider
 from opentelemetry.sdk._logs import LoggerProvider, LoggingHandler
 from opentelemetry.sdk._logs.export import BatchLogRecordProcessor
