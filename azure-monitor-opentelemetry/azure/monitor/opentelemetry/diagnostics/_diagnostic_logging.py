@@ -70,6 +70,6 @@ class AzureDiagnosticLogging:
     @classmethod
     def enable(cls, logger: logging.Logger):
         AzureDiagnosticLogging._initialize()
-        if AzureDiagnosticLogging._initialized:
+        if AzureDiagnosticLogging._initialized and AzureDiagnosticLogging._f_handler:
             logger.addHandler(AzureDiagnosticLogging._f_handler)
             _logger.info("Added Azure diagnostics logging to %s.", logger.name)

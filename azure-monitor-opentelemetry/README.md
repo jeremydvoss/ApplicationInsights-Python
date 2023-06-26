@@ -1,4 +1,4 @@
-# Azure Monitor Opentelemetry Distro
+# Azure Monitor Opentelemetry Distro client library for Python
 
 The Azure Monitor Distro of [Opentelemetry Python][ot_sdk_python] provides multiple installable components available for an Opentelemetry Azure Monitor monitoring solution. It allows you to instrument your Python applications to capture and report telemetry to Azure Monitor via the Azure monitor exporters.
 
@@ -27,7 +27,7 @@ Using the [Azure Core Tracing OpenTelemetry][azure_core_tracing_opentelemetry_pl
 
 ## Getting started
 
-### Key Concepts
+### Key concepts
 
 This package bundles a series of OpenTelemetry and Azure Monitor components to enable the collection and sending of telemetry to Azure Monitor. For MANUAL instrumentation, use the `configure_azure_monitor` function. AUTOMATIC instrumentation is not yet supported.
 
@@ -94,13 +94,13 @@ Samples are available [here][samples] to demonstrate how to utilize the above co
 ### Additional documentation
 
 * [Azure Portal][azure_portal]
-* [Official Azure monitor docs][azure_monitor_opentelemetry]
+* [Official Azure monitor docs][azure_monitor_enable_docs]
 * [OpenTelemetry Python Official Docs][ot_python_docs]
 
 <!-- LINKS -->
 [azure_core_tracing_opentelemetry_plugin]:https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/core/azure-core-tracing-opentelemetry
 [azure_core_tracing_opentelemetry_plugin_sample]: https://github.com/microsoft/ApplicationInsights-Python/tree/main/azure-monitor-opentelemetry/samples/tracing/azure_core.py
-[azure_monitor_opentelemetry]: https://learn.microsoft.com/azure/azure-monitor/app/opentelemetry-enable?tabs=python
+[azure_monitor_enable_docs]: https://learn.microsoft.com/azure/azure-monitor/app/opentelemetry-enable?tabs=python
 [azure_monitor_opentelemetry_exporters]: https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/monitor/azure-monitor-opentelemetry-exporter#microsoft-opentelemetry-exporter-for-azure-monitor
 [azure_portal]: https://portal.azure.com
 [azure_sub]: https://azure.microsoft.com/free/

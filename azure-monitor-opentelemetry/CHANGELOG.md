@@ -31,16 +31,21 @@
 
 ## [1.0.0b13](https://github.com/microsoft/ApplicationInsights-Python/releases/tag/v1.0.0b13) - 2023-06-14
 
+### Features Added
+
 - Vendor Instrumentations
     ([#280](https://github.com/microsoft/ApplicationInsights-Python/pull/280))
+- Support OTEL_PYTHON_DISABLED_INSTRUMENTATIONS
+    ([#294](https://github.com/microsoft/ApplicationInsights-Python/pull/294))
+
+### Other Changes
+
 - Update samples
     ([#281](https://github.com/microsoft/ApplicationInsights-Python/pull/281))
 - Fixed spelling
     ([#291](https://github.com/microsoft/ApplicationInsights-Python/pull/291))
 - Fixing formatting issues for azure sdk
     ([#292](https://github.com/microsoft/ApplicationInsights-Python/pull/292))
-- Support OTEL_PYTHON_DISABLED_INSTRUMENTATIONS
-    ([#294](https://github.com/microsoft/ApplicationInsights-Python/pull/294))
 
 ## 1.0.0b12(2023-05-05)
 
