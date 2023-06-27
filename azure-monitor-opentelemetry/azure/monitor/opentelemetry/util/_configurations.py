@@ -65,7 +65,9 @@ def _get_configurations(**kwargs) -> Dict[str, ConfigurationValue]:
 
     # TODO: remove when validation added to BLRP
     if configurations[LOGGING_EXPORT_INTERVAL_MS_ARG] <= 0:
-        raise ValueError("%s must be positive." % LOGGING_EXPORT_INTERVAL_MS_ARG)
+        raise ValueError(
+            "%s must be positive." % LOGGING_EXPORT_INTERVAL_MS_ARG
+        )
 
     return configurations
 
@@ -130,7 +132,10 @@ def _default_sampling_ratio(configurations):
             default = float(environ[SAMPLING_RATIO_ENV_VAR])
         except ValueError as e:
             _logger.error(
-                _INVALID_FLOAT_MESSAGE, SAMPLING_RATIO_ENV_VAR, default, e
+                _INVALID_FLOAT_MESSAGE,
+                SAMPLING_RATIO_ENV_VAR,
+                default,
+                e,
             )
     configurations[SAMPLING_RATIO_ARG] = default
 

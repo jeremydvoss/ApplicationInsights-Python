@@ -10,7 +10,7 @@ from os import environ
 from typing import Optional
 from pathlib import Path
 
-from azure.monitor.opentelemetry.exporter._connection_string_parser import (
+from azure.monitor.opentelemetry.exporter._connection_string_parser import ( # pylint: disable=import-error
     ConnectionStringParser,
 )
 
@@ -62,8 +62,7 @@ def _get_log_path(status_log_path=False):
         log_path = str(Path.home()) + _LOG_PATH_WINDOWS
         if status_log_path:
             return log_path + "\\status"
-        else:
-            return log_path
+        return log_path
     return None
 
 
