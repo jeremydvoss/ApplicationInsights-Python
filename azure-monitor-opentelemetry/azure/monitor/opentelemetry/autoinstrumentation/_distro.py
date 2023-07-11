@@ -54,12 +54,6 @@ def _configure_auto_instrumentation() -> None:
         environ.setdefault(
             OTEL_METRICS_EXPORTER, "azure_monitor_opentelemetry_exporter"
         )
-<<<<<<< HEAD
-        environ.setdefault(OTEL_TRACES_EXPORTER, "azure_monitor_opentelemetry_exporter")
-        environ.setdefault(OTEL_LOGS_EXPORTER, "azure_monitor_opentelemetry_exporter")
-        environ.setdefault(_OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED, "true")
-        settings.tracing_implementation = OpenTelemetrySpan
-=======
         environ.setdefault(
             OTEL_TRACES_EXPORTER, "azure_monitor_opentelemetry_exporter"
         )
@@ -69,7 +63,7 @@ def _configure_auto_instrumentation() -> None:
         environ.setdefault(
             _OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED, "true"
         )
->>>>>>> fbd197b (copying back from azure sdk after vendoring)
+        settings.tracing_implementation = OpenTelemetrySpan
         AzureStatusLogger.log_status(True)
         _logger.info(
             "Azure Monitor OpenTelemetry Distro configured successfully."
