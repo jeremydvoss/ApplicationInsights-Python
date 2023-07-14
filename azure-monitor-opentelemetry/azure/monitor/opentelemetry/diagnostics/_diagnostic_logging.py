@@ -58,7 +58,9 @@ class AzureDiagnosticLogging:
                     if not exists(_DIAGNOSTIC_LOG_PATH):
                         makedirs(_DIAGNOSTIC_LOG_PATH)
                     AzureDiagnosticLogging._f_handler = logging.FileHandler(
-                        join(_DIAGNOSTIC_LOG_PATH, _DIAGNOSTIC_LOGGER_FILE_NAME)
+                        join(
+                            _DIAGNOSTIC_LOG_PATH, _DIAGNOSTIC_LOGGER_FILE_NAME
+                        )
                     )
                     formatter = logging.Formatter(
                         fmt=log_format, datefmt="%Y-%m-%dT%H:%M:%S"
@@ -72,4 +74,6 @@ class AzureDiagnosticLogging:
         AzureDiagnosticLogging._initialize()
         if AzureDiagnosticLogging._initialized and AzureDiagnosticLogging._f_handler:
             logger.addHandler(AzureDiagnosticLogging._f_handler)
-            _logger.info("Added Azure diagnostics logging to %s.", logger.name)
+            _logger.info(
+                "Added Azure diagnostics logging to %s.", logger.name
+            )

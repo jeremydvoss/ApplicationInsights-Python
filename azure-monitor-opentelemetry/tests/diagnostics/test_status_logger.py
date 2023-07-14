@@ -41,7 +41,10 @@ def check_file_for_messages(agent_initialized_successfully, reason=None):
     with open(TEST_STATUS_LOGGER_LOCATION, "r") as f:
         f.seek(0)
         json = loads(f.readline())
-        assert json["AgentInitializedSuccessfully"] == agent_initialized_successfully
+        assert (
+            json["AgentInitializedSuccessfully"]
+            == agent_initialized_successfully
+        )
         assert json["AppType"] == "python"
         assert json["MachineName"] == TEST_MACHINE_NAME
         assert json["PID"] == TEST_PID

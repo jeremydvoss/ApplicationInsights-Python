@@ -40,7 +40,9 @@ def clear_file():
         f.truncate()
 
 
-def check_file_for_messages(level, messages, logger_name=TEST_LOGGER_NAME_SUB_MODULE):
+def check_file_for_messages(
+    level, messages, logger_name=TEST_LOGGER_NAME_SUB_MODULE
+):
     with open(TEST_DIAGNOSTIC_LOGGER_LOCATION, "r") as f:
         f.seek(0)
         for message in messages:

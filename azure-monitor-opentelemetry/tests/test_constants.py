@@ -35,7 +35,9 @@ class TestConstants(TestCase):
         reload(_constants)
         self.assertEqual(_constants._EXTENSION_VERSION, "disabled")
 
-    @patch.dict("os.environ", {"APPLICATIONINSIGHTS_CONNECTION_STRING": TEST_CONN_STR})
+    @patch.dict(
+        "os.environ", {"APPLICATIONINSIGHTS_CONNECTION_STRING": TEST_CONN_STR}
+    )
     def test_ikey(self):
         reload(_constants)
         self.assertEqual(
@@ -86,7 +88,9 @@ class TestConstants(TestCase):
         return_value="Linux",
     )
     def test_log_path_linux(self, mock_system):
-        self.assertEqual(_constants._get_log_path(), "/var/log/applicationinsights")
+        self.assertEqual(
+            _constants._get_log_path(), "/var/log/applicationinsights"
+        )
 
     @patch(
         "azure.monitor.opentelemetry._constants.platform.system",
