@@ -7,7 +7,6 @@
 import logging
 import platform
 from os import environ
-from typing import Optional
 from pathlib import Path
 
 from azure.monitor.opentelemetry.exporter._connection_string_parser import ( # pylint: disable=import-error
