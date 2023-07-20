@@ -78,6 +78,7 @@ def set_up(
     logger.handlers.clear()
     TEST_LOGGER.handlers.clear()
     TEST_LOGGER_SUB_MODULE.handlers.clear()
+    TEST_LOGGER_SUB_MODULE.setLevel(logging.WARN)
     patch.dict(
         "os.environ",
         {

@@ -16,7 +16,7 @@ Notwithstanding any other terms, you may reverse engineer this software to the
 extent required to debug changes to any libraries licensed under the GNU Lesser
 General Public License.
 
-License notice for opentelemetry-insturmentation
+License notice for opentelemetry-instrumentation
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -33,7 +33,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-asgi
+License notice for opentelemetry-instrumentation-asgi
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -50,7 +50,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-dbapi
+License notice for opentelemetry-instrumentation-dbapi
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -67,7 +67,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-django
+License notice for opentelemetry-instrumentation-django
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -84,7 +84,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-fastapi
+License notice for opentelemetry-instrumentation-fastapi
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -101,7 +101,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-flask
+License notice for opentelemetry-instrumentation-flask
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -118,7 +118,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-psycopg2
+License notice for opentelemetry-instrumentation-psycopg2
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -135,7 +135,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-requests
+License notice for opentelemetry-instrumentation-requests
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -152,7 +152,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-urllib
+License notice for opentelemetry-instrumentation-urllib
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
@@ -169,7 +169,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-License notice for opentelemetry-insturmentation-urllib3
+License notice for opentelemetry-instrumentation-urllib3
 ------------------------------------------------------------------------------
 
 Copyright The OpenTelemetry Authors
