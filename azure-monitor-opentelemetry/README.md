@@ -25,15 +25,15 @@ OpenTelemetry instrumentations allow automatic collection of requests sent from 
 
 Using the [Azure Core Tracing OpenTelemetry][azure_core_tracing_opentelemetry_plugin] library, you can automatically capture the distributed tracing from Azure Core libraries. See the associated [sample][azure_core_tracing_opentelemetry_plugin_sample] for more information. This feature is enabled automatically.
 
-## Getting started
-
-### Key concepts
+## Key concepts
 
 This package bundles a series of OpenTelemetry and Azure Monitor components to enable the collection and sending of telemetry to Azure Monitor. For MANUAL instrumentation, use the `configure_azure_monitor` function. AUTOMATIC instrumentation is not yet supported.
 
 The [Azure Monitor OpenTelemetry exporters][azure_monitor_opentelemetry_exporters] are the main components in accomplishing this. You will be able to use the exporters and their APIs directly through this package. Please go the exporter documentation to understand how OpenTelemetry and Azure Monitor components work in enabling telemetry collection and exporting.
 
 Currently, all instrumentations available in OpenTelemetry are in a beta state, meaning they are not stable and may have breaking changes in the future. Efforts are being made in pushing these to a more stable state.
+
+## Getting started
 
 ### Prerequisites
 
@@ -87,9 +87,31 @@ configure_azure_monitor(
 ...
 ```
 
-### Samples
+### Examples
 
 Samples are available [here][samples] to demonstrate how to utilize the above configuration options.
+
+## Troubleshooting
+
+The exporter raises exceptions defined in [Azure Core](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/core/azure-core/README.md#azure-core-library-exceptions).
+
+## Next steps
+
+Check out the [documentation][azure_monitor_enable_docs] for more.
+
+## Contributing
+
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
+the rights to use your contribution. For details, visit https://cla.microsoft.com.
+
+When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
+a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
+provided by the bot. You will only need to do this once across all repos using our CLA.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ### Additional documentation
 

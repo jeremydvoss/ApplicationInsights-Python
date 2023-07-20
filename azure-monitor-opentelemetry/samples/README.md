@@ -26,7 +26,7 @@ For guidance on the samples README, visit the [sample guide](https://github.com/
 |[metrics/attributes.py][attributes] | Add attributes to custom metrics counters |
 |[metrics/instruments.py][instruments] | Create observable instruments |
 
-|[tracing/django/manage.py][django] | Instrument a django app |
+|[tracing/django/sample/manage.py][django] | Instrument a django app |
 |[tracing/db_psycopg2.py][db_psycopg2] | Instrument the PsycoPG2 library |
 |[tracing/http_fastapi.py][http_fastapi] | Instrument a FastAPI app |
 |[tracing/http_flask.py][http_flask] | Instrument a Flask app |
