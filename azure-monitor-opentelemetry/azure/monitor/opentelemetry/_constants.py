@@ -40,6 +40,7 @@ _CUSTOMER_IKEY_ENV_VAR = None
 logger = logging.getLogger(__name__)
 
 
+# pylint: disable=global-statement
 def _get_customer_ikey_from_env_var():
     global _CUSTOMER_IKEY_ENV_VAR
     if not _CUSTOMER_IKEY_ENV_VAR:
