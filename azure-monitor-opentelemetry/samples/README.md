@@ -60,7 +60,7 @@ For guidance on the samples README, visit the [sample guide](https://github.com/
 To learn more, see the [Azure Monitor OpenTelemetry Distro documentation][distro_docs] and [OpenTelemetry documentation][otel_docs]
 
 <!-- Links -->
-[distro_docs]: https://learn.microsoft.com/opentelemetryazure/azure-monitor/app/opentelemetry-enable?tabs=python
+[distro_docs]: https://learn.microsoft.com/azure/azure-monitor/app/opentelemetry-enable?tabs=python
 [otel_docs]: https://opentelemetry.io/docs/
 [correlated_logs]: https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/monitor/azure-monitor-opentelemetry/samples/logging/correlated_logs.py
 [custom_properties]: https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/monitor/azure-monitor-opentelemetry/samples/logging/custom_properties.py
