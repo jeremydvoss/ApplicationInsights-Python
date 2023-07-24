@@ -213,7 +213,7 @@ def collect_custom_response_headers_attributes(message):
 
 def get_host_port_url_tuple(scope):
     """Returns (host, port, full_url) tuple."""
-    server = scope.get("server") or ["0.0.0.0", 80]
+    server = scope.get("server") or ["0.0.0.0", 80]  # nosec
     port = server[1]
     server_host = server[0] + (":" + str(port) if str(port) != "80" else "")
     full_path = scope.get("root_path", "") + scope.get("path", "")
