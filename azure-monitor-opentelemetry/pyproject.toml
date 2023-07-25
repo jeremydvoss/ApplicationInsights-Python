@@ -4,4 +4,4 @@ verifytypes = false
 pyright = false
 mypy = false
 pylint = false
-bandit = False
+bandit = false
