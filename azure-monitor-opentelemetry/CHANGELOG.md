@@ -4,21 +4,21 @@
 
 ### Features Added
 
+- Unpin OTel SDK/API version
+    ([#310](https://github.com/microsoft/ApplicationInsights-Python/pull/310))
+
 ### Breaking Changes
 
 ### Bugs Fixed
 
 ### Other Changes
 
-- Unpin OTel SDK/API version
-    ([#310](https://github.com/microsoft/ApplicationInsights-Python/pull/310))
-
-## [1.0.0b15](https://github.com/microsoft/ApplicationInsights-Python/releases/tag/v1.0.0b15) - 2023-07-17
+## 1.0.0b15 (2023-07-17)
 
 - Upgrade to exporter 1.0.0b15 and OTel 1.19
     ([#308](https://github.com/microsoft/ApplicationInsights-Python/pull/308))
 
-## [1.0.0b14](https://github.com/microsoft/ApplicationInsights-Python/releases/tag/v1.0.0b14) - 2023-07-12
+## 1.0.0b14 (2023-07-12)
 
 - Upgrade to exporter 1.0.0b14 and OTel 1.18
     ([#295](https://github.com/microsoft/ApplicationInsights-Python/pull/295))
@@ -29,7 +29,7 @@
 - Update Azure Core Tracing OpenTelemetry plugin
     ([#306](https://github.com/microsoft/ApplicationInsights-Python/pull/306))
 
-## [1.0.0b13](https://github.com/microsoft/ApplicationInsights-Python/releases/tag/v1.0.0b13) - 2023-06-14
+## 1.0.0b13(2023-06-14)
 
 ### Features Added
 
@@ -47,7 +47,7 @@
 - Fixing formatting issues for azure sdk
     ([#292](https://github.com/microsoft/ApplicationInsights-Python/pull/292))
 
-## 1.0.0b12(2023-05-05)
+## 1.0.0b12 (2023-05-05)
 
 ### Features Added
 
